@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminent of Lotus — Solarpunk Nation</title>
+<style>
+:root{--red:#c94236;--navy:#17364b;--gold:#d9aa32;--sky:#edf8ff;--ink:#18232b;--muted:#64717b;--line:#e5e8e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+a{text-decoration:none;color:inherit}button{font:inherit}.wrap{width:min(1450px,92%);margin:auto}
+.topbar{border-bottom:1px solid var(--line);background:#fff}.topbar .wrap{height:34px;display:flex;justify-content:flex-end;align-items:center;gap:28px;font-size:11px;color:#466174}.topbar a:hover{color:var(--red)}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 12px #0000000b}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;align-items:center;gap:12px;min-width:330px}.brand-mark{position:relative;width:61px;height:61px}.sun{position:absolute;width:35px;height:35px;border-radius:50%;background:linear-gradient(#ffd739,#f39b14);left:13px;top:0;box-shadow:0 0 0 5px #fff}.lotus{position:absolute;font-size:43px;line-height:1;bottom:-4px;color:var(--red);left:8px}.brand-name{font-family:Georgia,serif;font-size:27px;letter-spacing:1px}.brand-sub{font-size:12px;letter-spacing:6px;color:#527187;margin-top:4px}
+.menu{display:flex;align-items:center;gap:34px;font-size:12px}.menu a{padding:30px 0;position:relative}.menu a.active,.menu a:hover{color:var(--red)}.menu a.active:after{content:"";position:absolute;bottom:14px;left:0;right:0;height:2px;background:var(--red)}
+.btn{border:1px solid var(--red);padding:14px 23px;background:#fff;color:var(--red);cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:12px}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #c9423624}.btn.primary{background:var(--red);color:white}.join{padding:13px 24px}
+.stats{border-bottom:1px solid var(--line);background:#fff}.stats .wrap{min-height:108px;display:grid;grid-template-columns:1.1fr repeat(5,1fr);align-items:center}.stat{padding:14px 24px;border-right:1px solid var(--line);display:flex;gap:17px;align-items:center}.stat:last-child{border:0}.stat-icon{font-size:32px;color:var(--red)}.stat small{font-size:10px;color:#5b7180}.stat strong{display:block;font-size:17px;margin:6px 0}.up{font-size:11px;color:#42a85e}.live{font-size:12px}.live b{display:block;margin-bottom:10px}.dot{color:#e33}
+.hero{position:relative;min-height:455px;overflow:hidden;background:linear-gradient(90deg,#fff 0%,#fff 30%,#ffffffb5 42%,#ffffff00 63%),url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=90") center/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#eaf8ff33,#fff0 60%);pointer-events:none}.hero-content{position:relative;z-index:2;padding:55px 0 28px;width:590px}.eyebrow{font-family:Georgia,serif;font-size:35px;letter-spacing:4px;margin:0}.hero h1{font-family:Georgia,serif;font-weight:400;color:var(--red);font-size:48px;letter-spacing:3px;margin:7px 0 20px}.ornament{display:flex;align-items:center;gap:12px;color:var(--gold);margin-bottom:25px}.ornament:before,.ornament:after{content:"";height:1px;background:var(--gold);width:215px}.hero p{font-size:16px;line-height:1.75}.actions{display:flex;gap:17px;margin:23px 0 30px}.values-title{font-size:11px;letter-spacing:2px}.values{display:flex;gap:16px;margin-top:13px;font-size:11px;color:#4e5d65;flex-wrap:wrap}.values span{padding-right:15px;border-right:1px solid #ccd3d6}.play{position:absolute;right:30px;bottom:25px;z-index:3;color:white;display:flex;align-items:center;gap:10px;text-shadow:0 1px 4px #000}.play i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:white;color:var(--red);font-style:normal}
+.cards{padding:20px 0;background:#fff}.card-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}.card{min-height:150px;border:1px solid #e4e7e8;border-radius:9px;padding:23px;box-shadow:0 4px 15px #24333d0a;transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #24333d18;border-color:#d9aaa5}.card .icon{font-size:34px;color:var(--red);float:left;margin-right:15px}.card h3{font-size:12px;color:var(--navy);margin:3px 0 15px}.card p{font-size:10px;line-height:1.65;color:#59666e;min-height:50px}.explore{font-size:11px;color:#31546a}
+.vision{background:linear-gradient(110deg,#eff9ff,#fff);padding:34px 0 55px}.vision-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center}.vision-text{text-align:center}.vision h2{font:22px Georgia,serif;color:#a44b43;font-weight:400}.vision p{font:16px Georgia,serif;line-height:1.7}.quote{background:#ffffffc7;border-radius:9px;padding:35px 45px;display:flex;align-items:center;gap:35px;box-shadow:0 10px 35px #31546a0c}.quote .flower{font-size:65px;color:var(--red)}.quote p{font-size:14px}
+.modal{position:fixed;inset:0;background:#0b1b27d9;z-index:50;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{background:white;max-width:650px;padding:42px;border-radius:12px;position:relative;text-align:center}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}.mobile{display:none}
+@media(max-width:1100px){.menu{display:none}.mobile{display:block;border:0;background:none;font-size:28px}.stats .wrap{grid-template-columns:repeat(3,1fr)}.card-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.topbar{display:none}.brand{min-width:0}.brand-name{font-size:19px}.brand-sub{font-size:9px;letter-spacing:3px}.join{display:none}.stats .wrap{grid-template-columns:repeat(2,1fr)}.stat{padding:12px}.hero{background-position:65% center}.hero:before{content:"";position:absolute;inset:0;background:#ffffffe6}.hero-content{width:100%;padding-top:40px}.eyebrow{font-size:24px}.hero h1{font-size:34px}.card-grid{grid-template-columns:1fr}.vision-grid{grid-template-columns:1fr;gap:25px}.quote{padding:25px}.ornament:before,.ornament:after{width:110px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="#">▦ A–Z PORTAL</a><a href="#">♙ CITIZENS AREA</a><a href="#">❖ RESEARCH & INNOVATION</a><a href="#">▣ MEDIA HUB</a><a href="#contact">◉ CONTACT US</a><a href="#">🇬🇧 EN⌄</a></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#"><div class="brand-mark"><div class="sun"></div><div class="lotus">♧</div></div><div><div class="brand-name">LUMINENT OF LOTUS</div><div class="brand-sub">SOLARPUNK NATION</div></div></a>
+<nav class="menu"><a class="active" href="#">HOME</a><a href="#about">ABOUT US</a><a href="#governance">GOVERNANCE</a><a href="#society">SOCIETY</a><a href="#economy">ECONOMY</a><a href="#sustainability">SUSTAINABILITY</a><a href="#culture">CULTURE</a><a href="#visit">VISIT LOTUS</a></nav>
+<button class="btn primary join" onclick="openModal('Join the Vision','Welcome to the Luminent of Lotus. Together we can build a sustainable, enlightened and peaceful civilization.')">JOIN THE VISION</button><button class="mobile" onclick="alert('Menu: Home • About • Governance • Society • Economy • Sustainability • Culture • Visit Lotus')">☰</button>
+</div></header>
+
+<section class="stats"><div class="wrap">
+<div class="stat live"><div><b><span class="dot">●</span> LIVE NATION<br>DASHBOARD</b><span class="dot">● LIVE</span></div></div>
+<div class="stat"><span class="stat-icon">♙</span><div><small>CITIZENS</small><strong>12,458,721</strong><span class="up">+1,248 today</span></div></div>
+<div class="stat"><span class="stat-icon">⚗</span><div><small>RESEARCH PROJECTS</small><strong>1,208</strong><span class="up">+12 this week</span></div></div>
+<div class="stat"><span class="stat-icon">◉</span><div><small>ECONOMY (LOTUSS)</small><strong>$ 98.76 B</strong><span class="up">+1.35% today</span></div></div>
+<div class="stat"><span class="stat-icon">♨</span><div><small>RENEWABLE ENERGY</small><strong>87.6 %</strong><span class="up">+0.8% today</span></div></div>
+<div class="stat"><span class="stat-icon">♢</span><div><small>EDUCATION ENROLLMENT</small><strong>2,341,892</strong><span class="up">+2,341 today</span></div></div>
+</div></section>
+
+<section class="hero" id="about"><div class="wrap"><div class="hero-content">
+<p class="eyebrow">A NATION BORN FROM</p><h1>HARMONY &amp; WISDOM</h1><div class="ornament">❀</div>
+<p>Luminent of Lotus is a solarpunk nation where nature, technology<br>and human values exist in perfect balance.<br>We build a future that is sustainable, just and enlightened.</p>
+<div class="actions"><button class="btn primary" onclick="document.querySelector('.cards').scrollIntoView()">EXPLORE OUR NATION　→</button><button class="btn" onclick="openModal('Our Constitution','The Constitution of Lotus is founded on harmony, justice, knowledge, sustainability, cooperation and innovation.')">OUR CONSTITUTION　▧</button></div>
+<div class="values-title">WE STAND FOR</div><div class="values"><span>♧ Harmony</span><span>⚖ Justice</span><span>♧ Knowledge</span><span>♧ Sustainability</span><span>❀ Cooperation</span><span>♧ Innovation</span></div>
+</div></div><button class="play" style="border:0;background:none;cursor:pointer" onclick="openModal('Welcome to Lotus','Imagine a nation where clean energy powers every city, knowledge guides governance and nature grows beside technology.')"><i>▶</i> PLAY INTRO</button></section>
+
+<section class="cards"><div class="wrap card-grid">
+<div class="card" id="governance"><div class="icon">♜</div><h3>GOVERNANCE</h3><p>Transparent, ethical and people-centric governance for a just society.</p><button class="explore" onclick="openModal('Governance','Explore transparent institutions, citizen participation and ethical public administration.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card" id="economy"><div class="icon">▥</div><h3>ECONOMY</h3><p>A green, inclusive and innovative economy for everyone.</p><button class="explore" onclick="openModal('Economy','A circular economy built around green technology, dignity and shared prosperity.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card"><div class="icon">♢</div><h3>EDUCATION</h3><p>Education for all, inspired by wisdom and focused on the future.</p><button class="explore" onclick="openModal('Education','Universal education connecting wisdom, science, creativity and public purpose.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card"><div class="icon">⚗</div><h3>RESEARCH</h3><p>Innovating today for a sustainable and enlightened tomorrow.</p><button class="explore" onclick="openModal('Research','Open research networks develop solutions for people, planet and the future.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card" id="society"><div class="icon">♙</div><h3>SOCIETY</h3><p>A compassionate society where every citizen thrives.</p><button class="explore" onclick="openModal('Society','A peaceful, inclusive society founded on dignity, cooperation and equal opportunity.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card" id="visit"><div class="icon">⌖</div><h3>VISIT LOTUS</h3><p>Discover the beauty, culture and spirit of our nation.</p><button class="explore" onclick="openModal('Visit Lotus','Discover mountain cities, lotus gardens, living architecture and clean public transport.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+</div></section>
+
+<section class="vision" id="sustainability"><div class="wrap vision-grid"><div class="vision-text"><h2>OUR VISION</h2><div class="ornament">❀</div><p>To build a civilization where nature and technology coexist in harmony,<br>where every citizen lives with dignity, purpose and peace.</p></div><div class="quote"><div class="flower">♧</div><p>“From the light of wisdom,<br>we build the world of tomorrow.”<br><br>— Luminent of Lotus</p></div></div></section>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div style="font-size:55px;color:#c94236">♧</div><h2 id="modalTitle" style="font-family:Georgia,serif;color:#a44b43"></h2><p id="modalText" style="line-height:1.8;color:#59666e"></p><button class="btn primary" onclick="closeModal()">CONTINUE →</button></div></div>
+<script>
+function openModal(title,text){document.getElementById('modalTitle').textContent=title;document.getElementById('modalText').textContent=text;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()})
+</script>
+</body></html>
