@@ -14,43 +14,13 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdro
 .menu{display:flex;align-items:center;gap:34px;font-size:12px}.menu a{padding:30px 0;position:relative}.menu a.active,.menu a:hover{color:var(--red)}.menu a.active:after{content:"";position:absolute;bottom:14px;left:0;right:0;height:2px;background:var(--red)}
 .btn{border:1px solid var(--red);padding:14px 23px;background:#fff;color:var(--red);cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:12px}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #c9423624}.btn.primary{background:var(--red);color:white}.join{padding:13px 24px}
 .stats{border-bottom:1px solid var(--line);background:#fff}.stats .wrap{min-height:108px;display:grid;grid-template-columns:1.1fr repeat(5,1fr);align-items:center}.stat{padding:14px 24px;border-right:1px solid var(--line);display:flex;gap:17px;align-items:center}.stat:last-child{border:0}.stat-icon{font-size:32px;color:var(--red)}.stat small{font-size:10px;color:#5b7180}.stat strong{display:block;font-size:17px;margin:6px 0}.up{font-size:11px;color:#42a85e}.live{font-size:12px}.live b{display:block;margin-bottom:10px}.dot{color:#e33}
-.hero{
-    position:relative;
-    min-height:390px;
-    overflow:hidden;
-
-    background-image:
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,0.96) 0%,
-        rgba(255,255,255,0.92) 27%,
-        rgba(255,255,255,0.72) 43%,
-        rgba(255,255,255,0.20) 62%,
-        rgba(255,255,255,0.00) 78%
-    ),
-    url("lotuscity.jpg");
-
-    background-size:
-    100% 100%,
-    cover;
-
-    background-position:
-    center,
-    center center;
-
-    background-repeat:
-    no-repeat,
-    no-repeat;
-
-    border-top:3px solid #c94236;
-    border-bottom:3px solid #6baed6;
-}
-
-.cards{
-    padding:20px 0;
-    background:#fff;
-} 
-.cards{padding:20px 0;background:#fff}.card-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}.card{min-height:125px;border:1px solid #e4e7e8;border-radius:9px;padding:18px;box-shadow:0 4px 15px #24333d0a;transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #24333d18;border-color:#d9aaa5}.card .icon{font-size:34px;color:var(--red);float:left;margin-right:15px}.card h3{font-size:12px;color:var(--navy);margin:3px 0 15px}.card p{font-size:10px;line-height:1.65;color:#59666e;min-height:50px}.explore{font-size:11px;color:#31546a}
+.hero{position:relative;min-height:390px;overflow:hidden;background:
+radial-gradient(circle at 78% 45%,#fff8 0 7%,transparent 8%),
+linear-gradient(155deg,transparent 56%,#8fd1b9 57% 62%,transparent 63%),
+linear-gradient(145deg,transparent 48%,#b7d9e8 49% 57%,transparent 58%),
+linear-gradient(180deg,#dff5ff 0%,#eefaff 48%,#bce7df 49%,#77bca4 100%)}
+.hero-content{position:relative;z-index:2;padding:34px 0 20px;width:590px}.eyebrow{font-family:Georgia,serif;font-size:35px;letter-spacing:4px;margin:0}.hero h1{font-family:Georgia,serif;font-weight:400;color:var(--red);font-size:43px;letter-spacing:3px;margin:7px 0 20px}.ornament{display:flex;align-items:center;gap:12px;color:var(--gold);margin-bottom:25px}.ornament:before,.ornament:after{content:"";height:1px;background:var(--gold);width:215px}.hero p{font-size:16px;line-height:1.75}.actions{display:flex;gap:17px;margin:17px 0 20px}.values-title{font-size:11px;letter-spacing:2px}.values{display:flex;gap:16px;margin-top:13px;font-size:11px;color:#4e5d65;flex-wrap:wrap}.values span{padding-right:15px;border-right:1px solid #ccd3d6}.play{position:absolute;right:145px;bottom:25px;z-index:3;color:white;display:flex;align-items:center;gap:10px;text-shadow:0 1px 4px #000}.play i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:white;color:var(--red);font-style:normal}
+.hero .wrap{position:relative;z-index:2}.hero-content{width:590px;padding:34px 0 20px}.eyebrow{font-family:Georgia,serif;font-size:35px;letter-spacing:4px;margin:0}.hero h1{font-family:Georgia,serif;font-weight:400;color:var(--red);font-size:43px;letter-spacing:3px;margin:7px 0 20px}.ornament{display:flex;align-items:center;gap:12px;color:var(--gold);margin-bottom:25px}.ornament:before,.ornament:after{content:"";height:1px;background:var(--gold);width:215px}.hero p{font-size:16px;line-height:1.75}.actions{display:flex;gap:17px;margin:17px 0 20px}.values-title{font-size:11px;letter-spacing:2px}.values{display:flex;gap:16px;margin-top:13px;font-size:11px;color:#4e5d65;flex-wrap:wrap}.values span{padding-right:15px;border-right:1px solid #ccd3d6}.play{position:absolute;right:110px!important;bottom:25px!important;z-index:4;color:#fff;display:flex;align-items:center;gap:10px;text-shadow:0 1px 5px #000;border:0;background:none;cursor:pointer}.play i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#fff;color:var(--red);font-style:normal;text-shadow:none}.cards{padding:20px 0;background:#fff}.card-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}.card{min-height:125px;border:1px solid #e4e7e8;border-radius:9px;padding:18px;box-shadow:0 4px 15px #24333d0a;transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 15px 35px #24333d18;border-color:#d9aaa5}.card .icon{font-size:34px;color:var(--red);float:left;margin-right:15px}.card h3{font-size:12px;color:var(--navy);margin:3px 0 15px}.card p{font-size:10px;line-height:1.65;color:#59666e;min-height:50px}.explore{font-size:11px;color:#31546a}
 .vision{background:linear-gradient(110deg,#eff9ff,#fff);padding:25px 0 32px}.vision-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center}.vision-text{text-align:center}.vision h2{font:22px Georgia,serif;color:#a44b43;font-weight:400}.vision p{font:16px Georgia,serif;line-height:1.7}.quote{background:#ffffffc7;border-radius:9px;padding:35px 45px;display:flex;align-items:center;gap:35px;box-shadow:0 10px 35px #31546a0c}.quote .flower{font-size:65px;color:var(--red)}.quote p{font-size:14px}
 .modal{position:fixed;inset:0;background:#0b1b27d9;z-index:50;display:none;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{background:white;max-width:650px;padding:42px;border-radius:12px;position:relative;text-align:center}.close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:25px;cursor:pointer}.mobile{display:none}
 @media(max-width:1100px){.menu{display:none}.mobile{display:block;border:0;background:none;font-size:28px}.stats .wrap{grid-template-columns:repeat(3,1fr)}.card-grid{grid-template-columns:repeat(3,1fr)}}
@@ -93,8 +63,8 @@ html,body{margin:0!important;padding:0!important;background:#fff!important;overf
 
 <section class="stats"><div class="wrap">
 <div class="stat live"><div><b><span class="dot">●</span> LIVE NATION<br>DASHBOARD</b><span class="dot">● LIVE</span></div></div>
-<div class="stat"><span class="stat-icon">♙</span><div><small>CITIZENS</small><strong>001</strong><span class="up">+000 today</span></div></div>
-<div class="stat"><span class="stat-icon">⚗</span><div><small>RESEARCH PROJECTS</small><strong>003</strong><span class="up">+00 this week</span></div></div>
+<div class="stat"><span class="stat-icon">♙</span><div><small>CITIZENS</small><strong>12,458,721</strong><span class="up">+1,248 today</span></div></div>
+<div class="stat"><span class="stat-icon">⚗</span><div><small>RESEARCH PROJECTS</small><strong>1,208</strong><span class="up">+12 this week</span></div></div>
 <div class="stat"><span class="stat-icon">◉</span><div><small>ECONOMY (LOTUSS)</small><strong>$ 98.76 B</strong><span class="up">+1.35% today</span></div></div>
 <div class="stat"><span class="stat-icon">♨</span><div><small>RENEWABLE ENERGY</small><strong>87.6 %</strong><span class="up">+0.8% today</span></div></div>
 <div class="stat"><span class="stat-icon">♢</span><div><small>EDUCATION ENROLLMENT</small><strong>2,341,892</strong><span class="up">+2,341 today</span></div></div>
@@ -108,8 +78,8 @@ html,body{margin:0!important;padding:0!important;background:#fff!important;overf
 </div></div><button class="play" style="border:0;background:none;cursor:pointer" onclick="openModal('Welcome to Lotus','Imagine a nation where clean energy powers every city, knowledge guides governance and nature grows beside technology.')"><i>▶</i> PLAY INTRO</button></section>
 
 <section class="cards"><div class="wrap card-grid">
-<div class="card" id="governance"><div class="icon">♜</div><h3>LUMINENT</h3><p>Transparent, ethical and people-centric governance for a just society.</p><button class="explore" onclick="openModal('Governance','Explore transparent institutions, citizen participation and ethical public administration.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
-<div class="card" id="economy"><div class="icon">▥</div><h3>DEBATE HOUSE</h3><p>We follow the Thesis, Anti-Thesis & Synthesis method.</p><button class="explore" onclick="openModal('Economy','A circular economy built around green technology, dignity and shared prosperity.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card" id="governance"><div class="icon">♜</div><h3>GOVERNANCE</h3><p>Transparent, ethical and people-centric governance for a just society.</p><button class="explore" onclick="openModal('Governance','Explore transparent institutions, citizen participation and ethical public administration.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
+<div class="card" id="economy"><div class="icon">▥</div><h3>ECONOMY</h3><p>A green, inclusive and innovative economy for everyone.</p><button class="explore" onclick="openModal('Economy','A circular economy built around green technology, dignity and shared prosperity.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
 <div class="card"><div class="icon">♢</div><h3>EDUCATION</h3><p>Education for all, inspired by wisdom and focused on the future.</p><button class="explore" onclick="openModal('Education','Universal education connecting wisdom, science, creativity and public purpose.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
 <div class="card"><div class="icon">⚗</div><h3>RESEARCH</h3><p>Innovating today for a sustainable and enlightened tomorrow.</p><button class="explore" onclick="openModal('Research','Open research networks develop solutions for people, planet and the future.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
 <div class="card" id="society"><div class="icon">♙</div><h3>SOCIETY</h3><p>A compassionate society where every citizen thrives.</p><button class="explore" onclick="openModal('Society','A peaceful, inclusive society founded on dignity, cooperation and equal opportunity.')" style="border:0;background:none;cursor:pointer">Explore →</button></div>
